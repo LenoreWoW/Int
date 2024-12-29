@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Intimacy</title>
+
+  <!-- (Optional) Import Great Vibes cursive font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    /* Basic page reset */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #000; /* fallback if video won't load */
+      overflow: hidden;
+    }
+    /* Video as full-page background */
+    #bgVideo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* fills screen, may crop edges */
+      z-index: -1;       /* behind other elements */
+    }
+    /* Center the text */
+    .center-text {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      font-family: 'Great Vibes', cursive, sans-serif;
+      font-size: 6em;
+      color: #ffc0cb; /* soft pink for "intimacy" */
+      text-shadow: 0 0 10px rgba(255,192,203,0.8);
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background video -->
+  <!-- 'controls' is included to confirm the video loads. Remove if you want a pure background with no controls. -->
+  <video id="bgVideo" controls autoplay loop muted>
+    <source src="Chopin.mp4" type="video/mp4">
+    <!-- If this text is visible, the file or codec isn't supported by the browser. -->
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Centered text -->
+  <div class="center-text">intimacy</div>
+</body>
+</html>
